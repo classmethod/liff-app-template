@@ -4,6 +4,7 @@
     "newLine": "LF",
     "target": "es2018",
     "module": "es2015",
+    "moduleResolution": "node",
     "rootDir": "./src",
     "outDir": "./dist",
     "jsx": "react",

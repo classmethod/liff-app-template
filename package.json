@@ -5,7 +5,8 @@
   "author": "Takagi Kensuke <janus.wel.3@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "webpack --mode development src/index.ts"
+    "start": "webpack --mode development src/index.ts",
+    "type-check": "tsc --noEmit"
   },
   "dependencies": {
     "vconsole": "^3.3.4"

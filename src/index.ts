@@ -1,5 +1,3 @@
-import VConsole from 'vconsole'
-
-const vConsole = new VConsole()
+import './vconsole.ts'
 
 console.log('aaa')
