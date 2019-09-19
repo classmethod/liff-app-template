@@ -5,13 +5,14 @@
   "author": "Takagi Kensuke <janus.wel.3@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "parcel public/index.html"
+    "start": "webpack --mode development src/index.ts"
   },
   "dependencies": {
     "vconsole": "^3.3.4"
   },
   "devDependencies": {
-    "parcel-bundler": "^1.12.3",
-    "typescript": "^3.6.3"
+    "typescript": "^3.6.3",
+    "webpack": "^4.40.2",
+    "webpack-cli": "^3.3.9"
   }
 }
