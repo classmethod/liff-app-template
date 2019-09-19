@@ -1,0 +1,17 @@
+{
+  "name": "liff-debug",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Takagi Kensuke <janus.wel.3@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "parcel public/index.html"
+  },
+  "dependencies": {
+    "vconsole": "^3.3.4"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.3",
+    "typescript": "^3.6.3"
+  }
+}
