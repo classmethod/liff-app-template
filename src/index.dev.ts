@@ -1,5 +1,5 @@
-import './vconsole.ts'
+import './vconsole'
 
-import App from './app.ts'
+import App from './app'
 
 App()
