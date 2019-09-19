@@ -5,7 +5,9 @@
   "author": "Takagi Kensuke <janus.wel.3@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "webpack --mode development src/index.ts",
+    "start": "webpack-dev-server --mode development",
+    "build": "webpack --mode production --watch",
+    "prebuild": "rm -rf public/assets",
     "type-check": "tsc --noEmit"
   },
   "dependencies": {
@@ -14,6 +16,7 @@
   "devDependencies": {
     "typescript": "^3.6.3",
     "webpack": "^4.40.2",
-    "webpack-cli": "^3.3.9"
+    "webpack-cli": "^3.3.9",
+    "webpack-dev-server": "^3.8.1"
   }
 }
