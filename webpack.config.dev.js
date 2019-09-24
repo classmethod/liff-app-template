@@ -7,12 +7,21 @@ const config = merge(baseConfig, {
   entry: './src/index.dev.ts',
   mode: 'development',
   watch: true,
-  devtoo: 'inline-source-map',
+  devtool: 'inline-source-map',
+  devServer: {
+    contentBase: './dist',
+    open: true,
+    host: '0.0.0.0',
+    port: 9443,
+    disableHostCheck: true, // process.env.NODE_ENV === 'development'
+    headers: {
+      'Access-Control-Allow-Origin': '*'
+    },
+    useLocalIp: false,
+  },
   resolve: {
     extensions: ['.ts', '.js']
   },
 })
-
-console.log(config)
 
 module.exports = config
