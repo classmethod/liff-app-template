@@ -7,6 +7,7 @@ const config = merge(baseConfig, {
   entry: './src/index.dev.ts',
   mode: 'development',
   watch: true,
+  devtoo: 'inline-source-map',
   resolve: {
     extensions: ['.ts', '.js']
   },
