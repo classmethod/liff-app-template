@@ -12,6 +12,9 @@ module.exports = {
   },
   plugins: [
     new CleanWebpackPlugin(),
-    new HtmlWebpackPlugin(),
+    new HtmlWebpackPlugin({
+      inject: true,
+      template: 'public/index.html'
+    }),
   ],
 }
