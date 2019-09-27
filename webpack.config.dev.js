@@ -6,7 +6,6 @@ const baseConfig = require('./webpack.config.base.js')
 const config = merge(baseConfig, {
   entry: './src/index.dev.ts',
   mode: 'development',
-  watch: true,
   devtool: 'inline-source-map',
   devServer: {
     contentBase: './dist',
