@@ -1,8 +1,9 @@
 window.liff.init(
   data => {
     const {userId} = data.context
+    console.log('userId', userId)
     const accessToken = window.liff.getAccessToken()
-    console.log(userId, accessToken)
+    console.log('accessToken', accessToken)
   },
   error => {
     console.error(error)
