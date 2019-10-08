@@ -9,7 +9,6 @@ const config = merge(baseConfig, {
   devtool: 'inline-source-map',
   devServer: {
     contentBase: './dist',
-    open: true,
     host: '0.0.0.0',
     port: 9443,
     disableHostCheck: true, // process.env.NODE_ENV === 'development'
