@@ -23,7 +23,3 @@ declare interface Liff {
   init: (successCallback: SuccessCallback, errorCallback: ErrorCallback) => void
   getAccessToken: () => string
 }
-
-interface Window {
-  liff: Liff
-}

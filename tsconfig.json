@@ -2,8 +2,9 @@
   "compilerOptions": {
     "charset": "utf8",
     "newLine": "LF",
-    "target": "es2018",
-    "module": "es2015",
+    "target": "ESNext",
+    "module": "CommonJS",
+    "lib": ["DOM", "ESNext"],
     "moduleResolution": "node",
     "rootDir": "./src",
     "outDir": "./dist",
@@ -18,6 +19,7 @@
     "noImplicitReturns": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "forceConsistentCasingInFileNames": true
+    "forceConsistentCasingInFileNames": true,
+    "typeRoots": ["./node_modules/@types", "./src/@types"]
   }
 }
