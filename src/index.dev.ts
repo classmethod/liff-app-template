@@ -1,5 +1,2 @@
 import './vconsole'
-
-import App from './app'
-
-App()
+import './index'
