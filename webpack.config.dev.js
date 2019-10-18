@@ -11,11 +11,11 @@ const config = merge(baseConfig, {
     contentBase: './dist',
     host: '0.0.0.0',
     port: 9443,
-    disableHostCheck: true, // process.env.NODE_ENV === 'development'
     headers: {
       'Access-Control-Allow-Origin': '*'
     },
     useLocalIp: false,
+    disableHostCheck: true,
   },
   resolve: {
     extensions: ['.ts', '.js']
