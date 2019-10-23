@@ -5,6 +5,22 @@
 Select `Use this template` button and create a repo for your new project.
 Then, clone the repo to your local workspace.
 
+### Making `.env` file
+
+`.env` file includes LIFF ID is needed to run this app.
+
+```console
+echo LIFF_ID=xxxxxxxxxx-yyyyyyyy > .env
+```
+
+LIFF ID is a part of URI that has `line` scheme.
+
+```
+line://app/xxxxxxxxxx-yyyyyyyy
+           ^^^^^^^^^^^^^^^^^^^
+            LIFF ID
+```
+
 ### Starting Dev Server
 
 Run following commands to start dev server.

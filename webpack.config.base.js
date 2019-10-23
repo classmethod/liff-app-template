@@ -1,6 +1,7 @@
 const path = require('path')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const DotEnv = require('dotenv-webpack')
 
 module.exports = {
   output: {
@@ -16,5 +17,6 @@ module.exports = {
       inject: true,
       template: 'public/index.html'
     }),
+    new DotEnv(),
   ],
 }
