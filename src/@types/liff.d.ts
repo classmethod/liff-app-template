@@ -1,25 +1,35 @@
 // refer: https://developers.line.biz/ja/reference/liff/
 
-declare interface LiffError {
+interface LiffConfig {
+  liffId: string
+}
+
+interface LiffError {
   code: string
   message: string
 }
 
-declare interface LiffData {
-  language: string
-  context: {
-    type: 'utou' | 'room' | 'group' | 'name'
-    viewType: 'compact' | 'tall' | 'full'
-    userId: string
-    utouId?: string
-    roomId?: string
-    groupId?: string
-  }
+type SuccessCallback = () => void
+type ErrorCallback = (error: LiffError) => void
+type InitCallback = (config: LiffConfig, successCallback: SuccessCallback, errorCallback: ErrorCallback) => void
+type InitPromise = (config: LiffConfig) => Promise<void>
+type Init = InitCallback & InitPromise
+
+interface LoginConfig {
+  redirectUri?: string
 }
 
-type SuccessCallback = (data: LiffData) => void
-type ErrorCallback = (error: LiffError) => void
+interface Profile {
+  userId: string
+  displayName: string
+  pictureUrl: string
+  statusMessage: string
+}
+
 declare interface Liff {
-  init: (successCallback: SuccessCallback, errorCallback: ErrorCallback) => void
+  init: Init
+  login: (loginConfig?: LoginConfig) => void
+  isLoggedIn: () => boolean
+  getProfile: () => Promise<Profile>
   getAccessToken: () => string
 }
