@@ -9,9 +9,7 @@
   },
   "scripts": {
     "dev": "webpack-dev-server --config webpack.config.dev.js",
-    "host": "ngrok http 9443",
     "build": "webpack --config webpack.config.prod.js",
-    "build:dev": "webpack --config webpack.config.dev.js",
     "type-check": "tsc --noEmit"
   },
   "devDependencies": {

@@ -5,6 +5,12 @@
 Select `Use this template` button and create a repo for your new project.
 Then, clone the repo to your local workspace.
 
+### Making LIFF App
+
+Set `https://localhost:9443/` to endpoint URL.
+
+refer: https://developers.line.biz/ja/docs/liff/registering-liff-apps/
+
 ### Making `.env` file
 
 `.env` file includes LIFF ID is needed to run this app.
@@ -13,7 +19,7 @@ Then, clone the repo to your local workspace.
 echo LIFF_ID=xxxxxxxxxx-yyyyyyyy > .env
 ```
 
-LIFF ID is a part of URI that has `line` scheme.
+LIFF ID is a part of LIFF URL that has `line` scheme.
 
 ```
 line://app/xxxxxxxxxx-yyyyyyyy
@@ -30,15 +36,11 @@ yarn
 yarn dev
 ```
 
-### Hosting Dev Server
+Access `https://localhost:9443/` on your browser.
 
-To publish dev server for debugging, use the npm script "host" in another window.
+Warning like "Your connection is not private" `NET::ERR_CERT_AUTHORITY_INVALID` are shown, click `Advanced` then click `Proceed to localhost(unsafe)`
 
-```console
-yarn host
-```
-
-Note that this script uses [ngrok](https://ngrok.com/) to host. Set up ngrok before you use the "host" script.
+You may set `Enabled` to "Allow invalid certificates for resources loaded from localhost" on `chrome:flags` page.
 
 ## Building
 

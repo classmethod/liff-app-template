@@ -1,7 +1,8 @@
-export default window.liff
+const { liff } = window
+
+export default liff
 
 export function init() {
-  const { liff } = window
   const LIFF_ID = process.env.LIFF_ID
   if (!LIFF_ID) {
     throw new Error('Set LIFF ID as env var "LIFF_ID"')
@@ -15,7 +16,7 @@ export function init() {
         liff.login()
       }
 
-      resolve(true)
+      resolve()
     }).catch(error => {
       reject(error)
     })
