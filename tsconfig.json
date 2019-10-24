@@ -5,10 +5,9 @@
     "target": "ESNext",
     "module": "CommonJS",
     "lib": ["DOM", "ESNext"],
-    "moduleResolution": "node",
+    "jsx": "preserve",
     "rootDir": "./src",
     "outDir": "./dist",
-    "jsx": "react",
     "esModuleInterop": true,
     "declaration": true,
     "removeComments": true,
@@ -21,5 +20,6 @@
     "noUnusedParameters": true,
     "forceConsistentCasingInFileNames": true,
     "typeRoots": ["./node_modules/@types", "./src/@types"]
-  }
+  },
+  "exclude": ["node_modules", "dist"]
 }
