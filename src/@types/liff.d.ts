@@ -26,10 +26,15 @@ interface Profile {
   statusMessage: string
 }
 
+interface FriendshipStatus {
+  friendFlag: boolean
+}
+
 declare interface Liff {
   init: Init
   login: (loginConfig?: LoginConfig) => void
   isLoggedIn: () => boolean
   getProfile: () => Promise<Profile>
   getAccessToken: () => string
+  getFriendship: () => Promise<FriendshipStatus>
 }
