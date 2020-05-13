@@ -33,7 +33,7 @@ Run following commands to start dev server.
 
 ```console
 yarn
-yarn dev
+yarn start
 ```
 
 Access `https://localhost:9443/` on your browser.
