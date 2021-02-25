@@ -7,7 +7,7 @@ module.exports = {
   entry: './src/index.ts',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: '[name].[contentHash].js',
+    filename: '[name].[contenthash].js',
   },
   resolve: {
     extensions: ['.ts']

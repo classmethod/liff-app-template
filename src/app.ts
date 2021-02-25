@@ -1,8 +1,15 @@
-import liff, { init } from './liff'
+import liff from '@line/liff'
+
+import init from './init'
 
 export default async () => {
+  const liffId = process.env.LIFF_ID
+  if (liffId === undefined) {
+    throw new Error('this is unreached')
+  }
+
   const root = window.document.getElementById('root')
-  if (!root) {
+  if (root === null) {
     throw new Error('this is unreached')
   }
 
