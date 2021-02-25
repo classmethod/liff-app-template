@@ -32,8 +32,8 @@ line://app/xxxxxxxxxx-yyyyyyyy
 Run following commands to start dev server.
 
 ```console
-yarn
-yarn start
+npm install
+npm start
 ```
 
 Access `https://localhost:9443/` on your browser.
@@ -45,7 +45,7 @@ You may set `Enabled` to "Allow invalid certificates for resources loaded from l
 ## Building
 
 ```console
-yarn build
+npm run build
 ```
 
 Generates bundled codes in the dir `/dist`.
