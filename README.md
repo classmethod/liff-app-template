@@ -19,14 +19,6 @@ refer: https://developers.line.biz/ja/docs/liff/registering-liff-apps/
 echo LIFF_ID=xxxxxxxxxx-yyyyyyyy > .env
 ```
 
-LIFF ID is a part of LIFF URL that has `line` scheme.
-
-```
-line://app/xxxxxxxxxx-yyyyyyyy
-           ^^^^^^^^^^^^^^^^^^^
-            LIFF ID
-```
-
 ### Starting Dev Server
 
 Run following commands to start dev server.
@@ -38,9 +30,9 @@ npm start
 
 Access `https://localhost:9443/` on your browser.
 
-Warning like "Your connection is not private" `NET::ERR_CERT_AUTHORITY_INVALID` are shown, click `Advanced` then click `Proceed to localhost(unsafe)`
+In Google Chrome, if you saw the warning like "Your connection is not private" `NET::ERR_CERT_AUTHORITY_INVALID`, click `Advanced` then click `Proceed to localhost(unsafe)`. You may set `Enabled` to "Allow invalid certificates for resources loaded from localhost" on `chrome:flags` page.
 
-You may set `Enabled` to "Allow invalid certificates for resources loaded from localhost" on `chrome:flags` page.
+In Firefox, if you saw the warning like "Warning: Potential Security Risk Ahead", click `Advanced...` then click `Accept the Risk and Continue`
 
 ## Building
 
